@@ -32,8 +32,16 @@ class Queue:
             self.size +=1
             print(self.size)
         
-    def rearr(self):
-        print('hey')
+
+    def dequeue(self):
+        if self.isempty():
+            print('queue is empty')
+        else:
+            print('the poped number is: ', self.Q[self.front])
+            self.front = (self.front + 1) % self.capacity
+            print(self.front) 
+            self.size -=1
+            print(self.size)
 
 
 
@@ -44,7 +52,14 @@ if __name__ == "__main__":
     print(queue.rear)
     queue.frontt()
     queue.Enqueue(2)
+    queue.Enqueue(4)
+    queue.Enqueue(6)
+    queue.Enqueue(8)
     print(queue.Q)
+    print(queue.dequeue())
+    print(queue.dequeue())
+    print(queue.Q)
+    print(queue.frontt())
     # queue.Enqueue(4)
     # queue.Enqueue(6)
     # queue.Enqueue(8)
