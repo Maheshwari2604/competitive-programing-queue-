@@ -30,7 +30,7 @@ class Graph:
         print(visited) 
   
         # Create a queue for BFS 
-        queue = [] 
+        queue = []
   
         # Mark the source node as  
         # visited and enqueue it 
